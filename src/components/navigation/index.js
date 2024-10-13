@@ -30,7 +30,7 @@ const Navigation = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "nav-link nav-link-active" : "nav-link"
+              `nav-link ${isActive && "nav-link-active"}`
             }
           >
             All Pets
@@ -44,7 +44,7 @@ const Navigation = () => {
                   to={`/${type._links.self.href.split("/").pop()}`}
                   key={type.name}
                   className={({ isActive }) =>
-                    isActive ? "nav-link nav-link-active" : "nav-link"
+                    `nav-link ${isActive && "nav-link-active"}`
                   }
                 >
                   {type.name}s
